@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Exo 2', sans-serif;
+}
+body{
+	background-color: #435757;
+}
+div > p{
+	font-weight: bold;
+	font-size: 25px;
+}
+div{
+	margin:0;
+	border: solid 5px #435757;
+	padding: 40px;
+	min-height: 325px;
+	min-width: 44%;
+	max-width: 44%;
+	float: left;
+	flex: block;
+	color: white;	
+}
+#a1{
+	background: #D0B6B6;
+}
+#a2{
+	background: #E6C1B1;
+}
+#a3{
+	background: #B2AAAB;
+}
+#a4{
+	background: #B78D87;
+}

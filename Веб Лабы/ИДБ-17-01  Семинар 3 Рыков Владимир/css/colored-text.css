@@ -1,0 +1,11 @@
+body>header figure img {
+    animation: hue-rotate 6s linear infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: hue-rotate;
+}

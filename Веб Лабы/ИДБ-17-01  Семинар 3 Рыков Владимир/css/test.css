@@ -1,0 +1,39 @@
+.list {
+    font-size: 20px;
+    font-family: 'Exo 2', sans-serif;
+/*    отображение по центру странички*/
+	display: table; 
+/*    центровка*/
+	margin-left: auto; 
+	margin-right: auto;
+    margin-bottom: 20px;
+}
+.list li {
+/*    отключение нумерации списка*/
+	list-style-type: none;
+    transition: all 0.4s linear;    
+}
+.list ol li li:hover {
+/*    смена цвета при наведении на список>элемент списка>вложенный список>элемеет вложенного списка*/
+	background-color: #00FFDEFF;
+}
+.list ol {
+/*    установка счетчика на 0 для первого нумерованного списка ol1*/
+	counter-reset: list1 0;
+}
+.list ol li:before {
+/*    увеличение на 1 счетчика для первого списка ol1*/
+	counter-increment: list1;
+/*    вывод в содержание (content) элемента списка (li) значения счетчика для первого списка + "."*/
+	content: counter(list1) ". ";
+}
+.list ol ol {
+/*    установка счетчика на 0 для второго нумерованного списка ol2*/
+	counter-reset: list2;
+}
+.list ol ol li:before {
+    /*    увеличение на 1 счетчика для первого списка ol2*/
+	counter-increment: list2;
+    /*    вывод в содержание (content) элемента списка (li) значения счетчика для второго списка + "."*/
+	content: counter(list1) "." counter(list2) ". "; 
+}

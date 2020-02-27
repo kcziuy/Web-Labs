@@ -1,0 +1,241 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-bottom: 2px dashed black;
+}
+.logo {
+    display: flex;
+    font-size: 22px;
+    font-family: 'Exo 2', sans-serif;    
+}
+.logo a {
+    color: orange;
+    padding: 5px;
+  	position: relative;
+  	text-decoration: none;
+  	-webkit-transition: all .3s linear;
+  	-moz-transition: all .3s linear;
+  	transition: all .3s linear;    
+}
+.logo a:hover{
+    color: #777;
+}
+.logo a:before, .logo a:after {
+    content: '';
+    background-color: cyan;
+    position: absolute;
+    width: 4px;
+    height: 0px;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.logo a:before {
+    top: 0;
+    right: 100%;
+}
+.logo a:after {
+    bottom: 0;
+    left: 100%;
+}
+.logo a:hover:before, .logo a:hover:after {
+    height: 100%;
+}
+.site_name {
+    display: flex;
+    font-size: 22px;
+    font-family: 'Exo 2', sans-serif;
+    align-self: center;
+}
+.mainlist {    
+    font-size: 22px;
+    font-family: 'Exo 2', sans-serif;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;  
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mainlist p {
+    float: left;   
+    margin: 0px;    
+}
+.mainlist p a {
+    text-decoration: none;
+    color: black;
+}
+.mainlist hr{
+    height: .25rem;
+    width: 45%;
+    margin: 0;
+    background: tomato;
+    border: none;
+    transition: .3s ease-in-out;
+    clear: left;
+}
+.second:hover ~ hr{
+    margin-left: 60%;
+    width: 40%;
+}
+
+.table {
+    font-size: 20px;
+    font-family: 'Exo 2', sans-serif;
+	border-collapse: collapse;
+	text-align: center;
+	background: #A0A0A0;
+	margin-bottom: 20px;
+}
+.table th {
+	border: solid;
+	border-color: #FFFFFF; 
+	background: #D6AA00;
+    cursor: pointer;
+}
+.table th:active {
+    color: blue;
+}
+.table tr {
+	border: solid;
+	border-width: 6px;
+	border-color: #FFFAFF;
+    transition: all 0.3s linear;    
+}
+.table tr:hover {
+    background: #FFF000AA;
+    color: #399393;	
+}
+.table td {
+	border: solid;
+	border-color: #FFFFFF; 
+}
+
+.table2 {
+    font-size: 20px;
+    font-family: 'Exo 2', sans-serif;
+	border-collapse: separate;
+	text-align: center;
+	background: #F0F0F0;
+    margin-bottom: 20px;
+}
+.table2 th {
+	border: solid;
+	border-color: black; 
+	background: #F5FFFA;
+    cursor: pointer;
+}
+.table2 th:active {
+    color: black;
+    border: dotted;
+}
+.table2 tr {
+    transition: all 0.3s linear;    
+}
+.table2 tr:hover {
+    background: #B0E0E6;
+    color: #937573;	
+}
+.table2 td {
+	border: double;
+	border-color: black; 
+}
+.table2 td:hover {
+	border: solid;
+    color: black;
+}
+
+
+.list {
+    font-size: 20px;
+    font-family: 'Exo 2', sans-serif;
+/*    отображение по центру странички*/
+	display: table; 
+/*    центровка*/
+	margin-left: auto; 
+	margin-right: auto;
+    margin-bottom: 20px;
+}
+.list li {
+/*    отключение нумерации списка*/
+	list-style-type: none;
+    transition: all 0.4s linear;  
+}
+.list ol li li:hover {
+/*    смена цвета при наведении на список>элемент списка>вложенный список>элемеет вложенного списка*/
+	background-color: #00FFDEFF;
+}
+.list ol {
+/*    установка счетчика на 0 для первого нумерованного списка ol1*/
+	counter-reset: list1 0;    
+}
+.list ol li:before {
+/*    увеличение на 1 счетчика для первого списка ol1*/
+	counter-increment: list1;
+/*    вывод в содержание (content) элемента списка (li) значения счетчика для первого списка + "."*/
+	content: counter(list1) ". ";
+}
+.list ol ol {
+    margin-left: 40px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+/*    установка счетчика на 0 для второго нумерованного списка ol2*/
+	counter-reset: list2;
+}
+.list ol ol li:before {
+    /*    увеличение на 1 счетчика для первого списка ol2*/
+	counter-increment: list2;
+    /*    вывод в содержание (content) элемента списка (li) значения счетчика для второго списка + "."*/
+	content: counter(list1) "." counter(list2) ". "; 
+}
+.footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
+    -khtml-user-select: none;   
+    -moz-user-select: none;      
+    -ms-user-select: none;       
+    user-select: none;
+}
+.social {
+    text-align: center;
+    color: aliceblue; 
+    margin-bottom: 5px;
+}
+.social p {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.social a {
+    text-align: center;
+    color: aqua;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
